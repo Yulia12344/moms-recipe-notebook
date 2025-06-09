@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мій акаунт — Mom's Recipe Notebook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/2718/2718224.png" alt="Pie Icon">
+    <span>Mom’s Recipe Notebook</span>
+  </div>
+  <nav>
+    <a href="home.html" class="tab">Home</a>
+    <a href="all-recipes.html" class="tab">All recipes</a>
+    <a href="about.html" class="tab">About</a>
+    <a href="contact.html" class="tab">Contact</a>
+  </nav>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for a recipe...">
+    <button onclick="searchMeal()">
+      <img src="https://cdn-icons-png.flaticon.com/512/954/954591.png" alt="Search">
+    </button>
+    <a href="account.html" class="profile-icon" title="Мій профіль">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Profile Icon" />
+    </a>
+  </div>
+</header>
+
+<div class="account-box">
+  <h2>Мій акаунт</h2>
+  <p id="accountName">Ім’я: ...</p>
+  <p id="accountEmail">Email: ...</p>
+  <button class="logout-btn" onclick="logout()">Вийти</button>
+</div>
+
+<div class="saved-box">
+  <h3>Збережені страви</h3>
+  <ul id="savedMeals">
+  </ul>
+</div>
+
+<script src="static/js/account.js"></script>
+
+</body>
+</html>

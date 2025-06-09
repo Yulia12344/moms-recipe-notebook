@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mom's Recipe Notebook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <audio id="pageTurnSound" src="https://cdn.pixabay.com/audio/2023/03/27/audio_70bbf69024.mp3"></audio>
+
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2718/2718224.png" alt="Pie Icon">
+      <span>Mom’s Recipe Notebook</span>
+    </div>
+    <nav>
+      <a href="home.html" class="tab">Home</a>
+       <a href="all-recipes.html" class="tab">All recipes</a>
+      <a href="about.html" class="tab">About</a>
+      <a href="contact.html" class="tab">Contact</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a recipe...">
+      <button onclick="searchMeal()">
+        <img src="https://cdn-icons-png.flaticon.com/512/954/954591.png" alt="Search">
+      </button>
+    </div>
+  </header>
+<section style="padding: 60px; max-width: 800px; margin: auto; font-family: 'Inter', sans-serif;">
+  <h2 style="font-family:'Poppins', sans-serif; color:#ff6b6b;">Зв’яжіться з нами</h2>
+  <p>Ми завжди раді почути вас. Ось як ви можете з нами зв’язатися:</p>
+
+  <div style="margin-top: 30px; line-height: 1.8;">
+    <p><strong>📧 Email:</strong> support@momsrecipes.fake</p>
+    <p><strong>📞 Телефон:</strong> +380 44 555 1234</p>
+
+    <p><strong>🌐 Вебсайт:</strong> www.momsrecipes.fake</p>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3 style="font-family: 'Poppins', sans-serif;">Соцмережі</h3>
+    <p>
+      <a href="#" style="color:#ff6b6b; text-decoration:none; margin-right: 12px;">Instagram</a>
+      <a href="#" style="color:#ff6b6b; text-decoration:none; margin-right: 12px;">Facebook</a>
+      <a href="#" style="color:#ff6b6b; text-decoration:none;">YouTube</a>
+    </p>
+  </div>
+</section>
+
+  <section id="recipeSection" class="hidden"></section>
+
+<button id="openChatBtn">💬 Chat</button>
+
+<div id="chatPopup">
+  <div class="chat-header">
+    <strong>Авточат</strong>
+    <button onclick="closeChat()">×</button>
+  </div>
+  <div id="chatMessages"></div>
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Напишіть щось..." />
+    <button onclick="sendMessage()">▶</button>
+  </div>
+</div>
+
+
+<script src="static/js/chat.js"></script>
+
+</body>
+</html>
+

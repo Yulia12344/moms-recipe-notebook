@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mom's Recipe Notebook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <audio id="pageTurnSound" src="https://cdn.pixabay.com/audio/2023/03/27/audio_70bbf69024.mp3"></audio>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2718/2718224.png" alt="Pie Icon">
+      <span>Mom’s Recipe Notebook</span>
+    </div>
+    <nav>
+      <a href="home.html" class="tab">Home</a>
+       <a href="all-recipes.html" class="tab">All recipes</a>
+      <a href="about.html" class="tab">About</a>
+      <a href="contact.html" class="tab">Contact</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a recipe...">
+      <button onclick="searchMeal()">
+        <img src="https://cdn-icons-png.flaticon.com/512/954/954591.png" alt="Search">
+      </button>
+    </div>
+  </header>
+
+  <section id="recipeSection" class="hidden"></section>
+
+<section style="padding: 60px; max-width: 800px; margin: auto; font-size: 18px; line-height: 1.8;">
+  <h1 style="font-family: 'Poppins', sans-serif; font-size: 32px; color: #ff6b6b; margin-bottom: 20px;">
+    Про Mom’s Recipe Notebook
+  </h1>
+
+  <p>
+    Цей сайт був створений, щоб зберігати й ділитися улюбленими домашніми рецептами. Натхненням стала моя мама, яка завжди знала, як приготувати щось смачне навіть із найпростіших інгредієнтів.
+  </p>
+
+  <p>
+    Ми прагнемо зробити процес приготування їжі легким, приємним і душевним. Тут ви знайдете перевірені страви, крок за кроком, а також функції пошуку, сортування та навіть міні-історії, пов'язані з рецептами.
+  </p>
+
+  <p>
+    Mom’s Recipe Notebook — це не просто кулінарний сайт. Це затишне місце, де кожен знайде щось смачне, тепле і справжнє.
+  </p>
+
+  <p style="margin-top: 40px; font-style: italic; color: #777;">
+    Дякуємо, що ви з нами. Готуйте з любов’ю ❤️
+  </p>
+</section>
+
+<button id="openChatBtn" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1001;
+">
+  💬 Chat
+</button>
+
+
+<div id="chatPopup" style="
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 360px;
+  max-width: 90%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1001;
+  font-family: 'Inter', sans-serif;
+">
+  <div style="padding: 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+    <strong>Авточат</strong>
+    <button onclick="closeChat()" style="background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
+  </div>
+  <div id="chatMessages" style="height: 200px; overflow-y: auto; padding: 10px; background: #f9f9f9;"></div>
+  <div style="display: flex; padding: 10px; gap: 10px;">
+    <input type="text" id="chatInput" placeholder="Напишіть щось..." style="flex: 1; padding: 8px;" />
+    <button onclick="sendMessage()" style="background: #ff6b6b; color: white; border: none; padding: 8px 12px; border-radius: 8px;">▶</button>
+  </div>
+</div>
+
+<script src="static/js/script_chat.js"></script>
+
+
+</body>
+</html>
+

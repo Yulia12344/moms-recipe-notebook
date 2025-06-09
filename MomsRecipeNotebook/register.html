@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Вхід / Реєстрація</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff6b6b;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e45151;
+    }
+
+    .toggle {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .toggle a {
+      color: #ff6b6b;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Реєстрація -->
+  <div id="registerForm">
+    <h2>Реєстрація</h2>
+    <input type="text" id="regUsername" placeholder="Ім’я користувача">
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Пароль">
+    <button onclick="registerUser()">Зареєструватися</button>
+    <div class="message" id="registerMessage"></div>
+    <div class="toggle">Вже маєш акаунт? <a onclick="showLogin()">Увійти</a></div>
+  </div>
+
+  <!-- Вхід -->
+  <div id="loginForm" class="hidden">
+    <h2>Вхід</h2>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Пароль">
+    <button onclick="loginUser()">Увійти</button>
+    <div class="message" id="loginMessage"></div>
+    <div class="toggle">Немає акаунта? <a onclick="showRegister()">Зареєструватися</a></div>
+  </div>
+</div>
+
+<script src="static/js/register.js"></script>
+
+</body>
+</html>
