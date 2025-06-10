@@ -45,7 +45,7 @@ const user = JSON.parse(stored);
       document.getElementById('loginMessage').textContent = "Вхід успішний!";
       document.getElementById('loginMessage').style.color = "green";
       setTimeout(() => {
-        window.location.href = "home.html";
+        window.location.href = "index.html";
       }, 1500);
     } else {
       document.getElementById('loginMessage').textContent = "Невірний email або пароль.";
